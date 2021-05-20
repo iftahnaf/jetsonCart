@@ -1,0 +1,70 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   7 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "counter"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "jetsonCart_nodeGen:449:132-139"\
+    }\
+    ChartData {\
+      Name         "matrixTmp"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "jetsonCart_nodeGen:449:140-149"\
+      Dimensions   [4,51]\
+    }\
+    ChartData {\
+      Name         "cmdTmp"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "jetsonCart_nodeGen:449:150-156"\
+    }\
+    ChartData {\
+      Name         "gapsTmp"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "jetsonCart_nodeGen:449:157-164"\
+      Dimensions   [1,51]\
+    }\
+    ChartData {\
+      Name         "dirTmp"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "jetsonCart_nodeGen:449:165-171"\
+    }\
+    ChartData {\
+      Name         "rangeTmp"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "jetsonCart_nodeGen:449:172-180"\
+    }\
+    ChartData {\
+      Name         "meanMatrixTmp"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "jetsonCart_nodeGen:449:181-194"\
+      Dimensions   [1,51]\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
