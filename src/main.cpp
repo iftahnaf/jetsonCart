@@ -192,7 +192,7 @@ ros::Subscriber<std_msgs::Int8> sub_commands ("/commands", &commandsCB);
 
 void setup()
 {
-  int speed = 50;
+  int speed = 75;
   nh.initNode();
   nh.subscribe(sub_commands);
   nh.advertise(pub_range);
