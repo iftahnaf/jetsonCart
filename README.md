@@ -14,7 +14,7 @@ JetsonCart is an autonomous car based on Nvidia Jetson nano. It can drive autono
 The low-level control - motors, distance sensor and servo done by an Arduino Uno.
 The high-level control - mapping the room, generating the trajectory and navigate done by the Jetson nano.
 
-![](jetsonCart.jpg)
+![](https://user-images.githubusercontent.com/58637596/118992285-2a87c400-b98d-11eb-9c93-c4ace9f1630a.jpg)
 
 
 ## Hardware
