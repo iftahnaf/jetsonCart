@@ -3,6 +3,7 @@
 ## Table of contents
 * [General info](#general-info)
 * [Hardware](#hardware)
+* [Mechanical design](#mechanical-design)
 * [Software](#software)
 * [Setup](#setup)
 * [Launch](#launch)
@@ -25,6 +26,11 @@ The high-level control - mapping the room, generating the trajectory and navigat
 * [3S1P 1000 mah LiPo battery](https://www.amazon.com/1000mAh-Airplane-Quadcopter-Helicopter-Multi-Motor/dp/B07TJW4SY9/ref=sr_1_5?dchild=1&keywords=1000mah+3s1p+11.v+lipo&qid=1621510990&sr=8-5)
 * [Arduino Uno](https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/ref=sr_1_3?dchild=1&keywords=arduino+uno&qid=1621511012&sr=8-3)
 * [Jetson nano](https://www.amazon.com/NVIDIA-Jetson-Nano-Developer-945-13541-0000-000/dp/B08J157LHH/ref=sr_1_4?dchild=1&keywords=jetson+nano&qid=1621511032&sr=8-4)
+
+## Mechanical design
+![](https://user-images.githubusercontent.com/58637596/119221207-dc8ecf80-baf6-11eb-8cb1-7f8218945035.jpg)
+
+STL files are located within /include/stl_files. Printed by Ender3 printer with default settings.
 
 ## Software
 Low-level control developed using PlatformIO extension for VSC. Communication between Ardunio and Jetson nano based on rosserial package and the code written in C++ (src/main.cpp).
