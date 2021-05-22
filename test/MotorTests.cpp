@@ -9,6 +9,7 @@ App URI: https://bit.ly/2BlMAea
 Version: 1.0
 License: Remixing or Changing this Thing is allowed. Commercial use is not allowed.
 */
+#include <Arduino.h>
 
 #define in1 5 //L298n Motor Driver pins.
 #define in2 6
