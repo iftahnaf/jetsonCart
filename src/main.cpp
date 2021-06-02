@@ -113,7 +113,7 @@ void scanning (int &pos, int &flag, int minAngle, int maxAngle, Servo &myservo, 
 
 void commandsCB (const std_msgs::Int8& commands)
 {
-  if (commands.data == SCAN && scansNum < 6)
+  if (commands.data == SCAN && scansNum < 5)
   {
     scanning(pos, flag, minAngle, maxAngle, myservo, servoPos, pub_pos, scansNum, range_msg, pub_range);
     cart.stopDrive();
@@ -132,7 +132,7 @@ void commandsCB (const std_msgs::Int8& commands)
     getRange(range_msg, pub_range);
     myservo.write((minAngle+maxAngle)/2);
     pos = minAngle;
-    if (counter % 10 == 0)
+    if (counter % 5 == 0)
     {
       nh.loginfo("Driving forward...\n");
       scansNum = 0;
@@ -144,7 +144,7 @@ void commandsCB (const std_msgs::Int8& commands)
     getRange(range_msg, pub_range);
     myservo.write((minAngle+maxAngle)/2);
     pos = minAngle;
-    if (counter % 10 == 0)
+    if (counter % 5 == 0)
     {
       nh.loginfo("Driving backward...\n");
       scansNum = 0;
@@ -156,7 +156,7 @@ void commandsCB (const std_msgs::Int8& commands)
     getRange(range_msg, pub_range);
     myservo.write((minAngle+maxAngle)/2);
     pos = minAngle;
-    if (counter % 10 == 0)
+    if (counter % 5 == 0)
     {
       nh.loginfo("Turning right...\n");
       scansNum = 0;
@@ -168,7 +168,7 @@ void commandsCB (const std_msgs::Int8& commands)
     getRange(range_msg, pub_range);
     myservo.write((minAngle+maxAngle)/2);
     pos = minAngle;
-    if (counter % 10 == 0)
+    if (counter % 5 == 0)
     {
       nh.loginfo("Turning left...\n");
       scansNum = 0;
@@ -192,7 +192,7 @@ ros::Subscriber<std_msgs::Int8> sub_commands ("/commands", &commandsCB);
 
 void setup()
 {
-  int speed = 75;
+  int speed = 50;
   nh.initNode();
   nh.subscribe(sub_commands);
   nh.advertise(pub_range);
@@ -207,6 +207,5 @@ void setup()
 
 void loop()
 {
-  delay(1);
   nh.spinOnce();
 }
