@@ -207,5 +207,6 @@ void setup()
 
 void loop()
 {
+  delay(5);
   nh.spinOnce();
 }
